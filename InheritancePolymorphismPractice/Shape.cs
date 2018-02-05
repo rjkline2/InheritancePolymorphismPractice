@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InheritancePolymorphismPractice
 {
-    class Shape
+    public class Shape
     {
         //fields
         private int sides;
@@ -20,6 +20,30 @@ namespace InheritancePolymorphismPractice
 
         //Consturctors
 
-    
+        public Shape()
+        {
+
+        }
+        public Shape (int sides)
+        {
+            this.sides = sides;
+        }
+
+        //Methods
+
+        public class Rectangle : Shape
+        {
+            private double area;
+
+            public Rectangle(double area)
+            {
+                this.area = area;
+            }
+            public double Area
+            {
+                get { return this.area; }
+                set { this.area = value; }
+            }
+        }
     }
 }

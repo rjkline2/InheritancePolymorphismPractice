@@ -21,13 +21,21 @@ namespace InheritancePolymorphismPractice
         }
         public Standard(int cost) //overloaded constructor
         {
-            Cost = cost; //instead of using the this.thingy = thing value thing....
+            Cost = cost; //instead of using the this.thingy = thing value thingy....
         }
 
         //Methods
         public override void Activate()
         {
-            base.Activate();
+            if (IsActive == false)
+            {
+                IsActive = true;
+                Console.WriteLine("Your standard membership has been activated.");
+            }
+            else
+            {
+                Console.WriteLine("Your standard membership is already active.");
+            }
         }
     }
 }

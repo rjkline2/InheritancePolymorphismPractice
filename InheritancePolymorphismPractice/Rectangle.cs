@@ -12,8 +12,8 @@ namespace InheritancePolymorphismPractice
             private double area;
         // A derived class does NOT inherit the constructors of the base class. 
         // However, the constructors of the base class can be accessed using the "base" keyword. 
-
-            public Rectangle(double area)
+        
+            public Rectangle(double area) : base(4)
             {
                 this.area = area;
             }

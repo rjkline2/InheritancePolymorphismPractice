@@ -6,34 +6,12 @@ using System.Threading.Tasks;
 
 namespace InheritancePolymorphismPractice
 {
-    public class Shape
+    public class Rectangle : Shape
     {
-        //fields
-        private int sides;
-
-        //properties
-        public int Sides
-        {
-            get { return this.sides; }
-            set { this.sides = value; }
-        }
-
-        //Consturctors
-
-        public Shape()
-        {
-
-        }
-        public Shape (int sides)
-        {
-            this.sides = sides;
-        }
-
-        //Methods
-
-        public class Rectangle : Shape
-        {
+        
             private double area;
+        // A derived class does NOT inherit the constructors of the base class. 
+        // However, the constructors of the base class can be accessed using the "base" keyword. 
 
             public Rectangle(double area)
             {
@@ -44,7 +22,8 @@ namespace InheritancePolymorphismPractice
                 get { return this.area; }
                 set { this.area = value; }
             }
-        }
+           
+        
 
     }
 }

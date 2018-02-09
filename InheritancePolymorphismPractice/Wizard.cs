@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace InheritancePolymorphismPractice
+namespace InheritanceAndPolymorphismPractice
 {
-    class Wizard
+    public class Wizard
     {
         //fields
         private bool isGood;

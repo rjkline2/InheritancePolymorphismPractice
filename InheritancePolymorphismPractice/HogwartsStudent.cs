@@ -1,45 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace InheritancePolymorphismPractice
+namespace InheritanceAndPolymorphismPractice
 {
-    class HogwartsStudent
+    public class HogwartsStudent : Wizard
     {
-        namespace InheritanceAndPolymorphismPractice
-    {
-        public class HogwartsStudent : Wizard
+        //fields
+        private int yearInSchool;
+
+        //Properties
+        public int YearInSchool
         {
-            //fields
-            private int yearInSchool;
+            get { return this.yearInSchool; }
+            set { this.yearInSchool = value; }
+        }
 
-            //Properties
-            public int YearInSchool
-            {
-                get { return this.yearInSchool; }
-                set { this.yearInSchool = value; }
-            }
+        //Constructors
+        public HogwartsStudent()
+        {
+            //default constructor
+        }
 
-            //Constructors
-            public HogwartsStudent()
-            {
-                //default constructor
-            }
+        public HogwartsStudent(int yearInSchool)
+        {
+            this.yearInSchool = yearInSchool;
+            this.IsGood = true;
+        }
 
-            public HogwartsStudent(int yearInSchool)
-            {
-                this.yearInSchool = yearInSchool;
-                this.IsGood = true;
-            }
-
-            //Methods
-            public int Study()
-            {
-                return yearInSchool++;
-            }
+        //Methods
+        public int Study()
+        {
+            return yearInSchool++;
         }
     }
-}
 }
